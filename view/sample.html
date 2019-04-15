@@ -1,0 +1,64 @@
+ <html lang = "en-US">
+  <head>
+  <title>{{ title }}</title>
+  <link rel = "stylesheet"
+    type = "text/css"
+    href = "/bc/myStyle.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" >
+
+  </head>
+ <body> 
+<div class="main">  
+
+  <div class="container" >
+   <div id ="topnav">
+   <a href="articles"><h3>{{art}}</h3></a>
+   <a href="/contact"><h3>{{cont}}</h3></a>
+   <a href="/about"><h3>{{abt}}</h3></a>
+   <img src="{{logo.url}}">
+   </div>
+  </div>
+
+  <div class="social_links">
+   <a href="#" class="fa fa-facebook"></a>
+   <a href="#" class="fa fa-twitter"></a>
+  </div>
+
+   <div class="wrapper">
+
+      {% for item in group %}
+      <div id="{{ item.group_id }}" align="center">
+        <img src="{{item.file.url}}" width="20" height="20">
+        <div id="date"><p>{{ item.date }}</p></div>
+        <h3>{{ item.single_line }}</h3>
+        <p>{{ item.multi_line }}</p>   
+      </div>
+      {% endfor %}
+
+     
+   </div>
+
+s    <div class="footer">
+  <h2>Subscribe to my applications</h2>
+  <h4>I won't bug you much just a head's up whenever anything is new</h4>
+  <div id="info-bar">
+  <p>Get in touch with our sales team <a href="mailto:mailto:sales@cs.io">sales@cs.io</a></p>
+  <div id="git" >
+  <a title="Dribble" href="dribble.com">Dribble</a>
+  <a title="Github" href="/github.com">Github</a>
+  <a title="twitter" href="/twitter.com">Twitter</a>
+  <a title="Linkedin" href="/Linkedin.com">Linkedin</a>
+    </div>
+  </div>
+
+  <div id="form"> 
+  <form action="/action_page.php">
+  <input type="email" name="emailaddress" placeholder="enter your email">
+  <button type="button">subscribe</button>
+  </div>
+
+
+</div>
+  </body>
+ </html>
