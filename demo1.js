@@ -77,7 +77,10 @@ app.get('/contact', function(req, res) {
 });
 
 
-
-app.listen(443);
+const PORT = process.env.PORT || 3000
+app.listen(PORT, err =>{
+   if(err) throw err
+    console.log("app started on", PORT);
+});
 
 
