@@ -77,10 +77,12 @@ app.get('/contact', function(req, res) {
 });
 
 
-const PORT = process.env.PORT || 3000
-app.listen(PORT, err =>{
-   if(err) throw err
-    console.log("app started on", PORT);
-});
+// const PORT = process.env.PORT || 3000
+// app.listen(PORT, err =>{
+//    if(err) throw err
+//     console.log("app started on", PORT);
+// });
+
+app.listen(8000);
 
 
